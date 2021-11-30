@@ -14,9 +14,10 @@ import COLORS from "../constants/Colors";
 import { GetWeather, MONTH } from "../constants/Constants";
 import { useIsFocused } from "@react-navigation/core";
 
-export default function HomeScreen(props) {
+export default function SearchDataScreen(props) {
 
     const weatherData = props.route?.params?.weatherData;
+   
     console.log("PROPS",props.route)
     useEffect(() => {
         getApiData();
@@ -269,13 +270,7 @@ export default function HomeScreen(props) {
             <Text style={{color:COLORS.WHITE,fontSize:12}}>{GetWeather(currentDateItem?.next_12_hours?.summary.symbol_code).Title} </Text>
           </View>
         </View>
-     <TouchableOpacity onPress={()=>props.navigation.push('SearchScreen')} style={styles.buttonContainer}>
-          <Text style={styles.buttonText}>Search</Text>
-          <Image
-            style={{width: 24, height: 24}}
-            source={require('../../assets/Icons/search.png')}
-          />
-        </TouchableOpacity>
+
       </View>
     </View>
   );

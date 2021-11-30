@@ -1,7 +1,7 @@
 export const fetchWeatherData = async (lat, lng) => {
     console.log("lAT",lat)
     try {
-        let response = await fetch('https://api.met.no/weatherapi/locationforecast/2.0/compact?lat=60.10&lon=9.58',{
+        let response = await fetch(`https://api.met.no/weatherapi/locationforecast/2.0/compact?lat=${lat}&lon=${lng}`,{
             method:"GET",
             headers:{
                 'User-Agent': 'Web/2.0',
