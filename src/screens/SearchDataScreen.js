@@ -231,7 +231,7 @@ export default function SearchDataScreen(props) {
                 color: COLORS.WHITE,
               }}
             >
-              10
+               {`${currentDateItem?.instant?.details.cloud_area_fraction}%`}
             </Text>
             <Text
               style={{
